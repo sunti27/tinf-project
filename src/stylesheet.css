@@ -20,3 +20,16 @@ main {
 footer {
   grid-area: Footer;
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #222;
+        color: #fefefe;
+    }
+    a {
+        color: #5fa9ee;
+    }
+    img {
+        filter: grayscale(20%);
+    }
+}
