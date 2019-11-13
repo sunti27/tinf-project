@@ -4,10 +4,9 @@
         --bg-alt: #333;
         --font: #eee;
         --bg-code: rgb(58, 62, 68);
-        --bg-header: #ABC;
-        --font-header: black;
+        --link: rgb(5, 199, 231);
 
-        --hl-param: rgb(230, 98, 14);
+        --hl-imp: rgb(230, 98, 14);
         --hl-keyword: rgb(16, 180, 230);
         --hl-function: violet;
         --hl-number: orange;
@@ -21,10 +20,9 @@
         --bg-alt: whitesmoke;
         --font: black;
         --bg-code: rgb(210, 224, 230);
-        --bg-header: #ABC;
-        --font-header: black;
+--link: #0000EE;
 
-        --hl-param: color: rgb(230, 98, 14);
+        --hl-imp: color: rgb(230, 98, 14);
         --hl-keyword: blue;
         --hl-function: purple;
         --hl-number: orange;
@@ -60,8 +58,7 @@ header {
   border-bottom: 1px var(--font) solid;
   font-family: Arial, sans-serif;
   display: inline;
-  background-color: var(--bg-header);
-  color: var(--font-header);
+  background-color: var(--bg-alt)
 }
 
 .headline a img {
@@ -77,7 +74,7 @@ nav {
   grid-area: Menu;
   overflow-y: scroll;
   overflow-x: hidden;
-  background-color: var(--bg-alt)
+  background-color: var(--bg-alt);
 }
 
 main {
@@ -89,7 +86,12 @@ main section {
   margin: 3%;
 }
 
-a {
+main a:visited, main a {
+    text-decoration: none;
+    color: var(--link);
+}
+
+nav {
   text-decoration: none;
   color: var(--font);
 }
@@ -168,8 +170,8 @@ code:before {
 .string {color: var(--hl-string);}
 .function {color: var(--hl-function);}
 .keyword {color: var(--hl-keyword);}
-.param {color: var(--hl-param);}
+.imp {color: var(--hl-imp);}
 
-.number, .string, .function, .keyword, .param {
+.number, .string, .function, .keyword, .imp {
   font-weight: bold;
 }
