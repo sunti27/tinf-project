@@ -1,4 +1,4 @@
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --bg-main: #222;
         --bg-alt: #333;
@@ -15,7 +15,7 @@
     }
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) { */
     :root {
         --bg-main: white;
         --bg-alt: whitesmoke;
@@ -23,6 +23,7 @@
         --bg-code: rgb(210, 224, 230);
         --link: #0000EE;
         --border: black;
+        --footer-dark: #cdd5de;
 
         --hl-imp: color: rgb(230, 98, 14);
         --hl-keyword: blue;
@@ -30,7 +31,7 @@
         --hl-number: orange;
         --hl-string: rgb(18, 161, 70);
     }
-}
+/* } */
 
 html, body {
   margin: 0;
@@ -60,7 +61,7 @@ header {
   border-bottom: 1px var(--border) solid;
   font-family: Arial, sans-serif;
   display: inline;
-  background-color: var(--bg-alt)
+  background-color: var(--bg-alt);
 }
 
 .headline a img {
@@ -74,8 +75,6 @@ header {
 
 nav {
   grid-area: Menu;
-  overflow-y: scroll;
-  overflow-x: hidden;
   background-color: var(--bg-alt);
 }
 
@@ -88,48 +87,28 @@ main section {
   margin: 3%;
 }
 
-main a:visited, main a {
+main a:link, main a:visited  {
     text-decoration: none;
     color: var(--link);
+}
+
+footer a:link, footer a:visited {
+    color: var(--font);
 }
 
 nav {
   text-decoration: none;
   margin: 0;
   color: var(--font);
+  border-right: 1px solid var(--border);
 }
 
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-
+nav a, nav a:visited {
+    color: var(--font);
 }
 
-footer{
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-
-}
-
-footer li {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
-  float: left;
-
-}
-
-
-footer li:hover {
-
-  background-color: #111;
+nav:link:hover {
+    color: var(--link);
 }
 
 nav a:hover {
@@ -143,6 +122,13 @@ nav section {
 nav section ol li {
   margin-bottom: 3%;
 }
+
+h3 a, ul a, ol a {
+    color: white;
+    text-decoration: none;
+}
+
+
 
 hr {
     border: 0;
