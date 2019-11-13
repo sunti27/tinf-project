@@ -5,6 +5,7 @@
         --font: #eee;
         --bg-code: rgb(58, 62, 68);
         --link: rgb(5, 199, 231);
+        --border: black;
 
         --hl-imp: rgb(230, 98, 14);
         --hl-keyword: rgb(16, 180, 230);
@@ -20,7 +21,8 @@
         --bg-alt: whitesmoke;
         --font: black;
         --bg-code: rgb(210, 224, 230);
---link: #0000EE;
+        --link: #0000EE;
+        --border: black;
 
         --hl-imp: color: rgb(230, 98, 14);
         --hl-keyword: blue;
@@ -55,7 +57,7 @@ header {
   grid-area: Header;
   text-align: center;
   position: sticky;
-  border-bottom: 1px var(--font) solid;
+  border-bottom: 1px var(--border) solid;
   font-family: Arial, sans-serif;
   display: inline;
   background-color: var(--bg-alt)
@@ -93,6 +95,7 @@ main a:visited, main a {
 
 nav {
   text-decoration: none;
+  margin: 0;
   color: var(--font);
 }
 
@@ -142,7 +145,9 @@ nav section ol li {
 }
 
 hr {
-  margin: 1%;
+    border: 0;
+    border-top: 1px var(--border) solid;
+    margin: 1%;
 }
 
 pre {
