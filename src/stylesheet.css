@@ -1,12 +1,16 @@
+:root {
+    !important
+}
+
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: "Century Gothic", sans-serif;
+  font-family: Arial, sans-serif;
   font-weight: lighter;
   scroll-behavior: smooth;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 body {
@@ -66,7 +70,52 @@ hr {
   border-color: white;
 }
 
-/*@media (prefers-color-scheme: dark) {
+pre {
+    counter-reset: line;
+    border: 1px solid grey;
+    background: rgb(210, 224, 230);
+    padding: 0;
+    padding: 10px;
+    border-radius: 3px;
+    border-left: 5px solid rgb(48, 165, 232);
+}
+
+code {
+    counter-increment: line;
+
+    margin: 0;
+    float: left;
+}
+
+code:before{
+    content: counter(line) ". ";
+}
+
+.number {
+    color: orange;
+}
+
+.string {
+    color: rgb(18, 161, 70);
+}
+
+.function {
+    color: purple;
+}
+
+.keyword {
+    color: blue;
+}
+
+.param {
+    color: rgb(230, 98, 14);
+}
+
+.number, .string, .function, .keyword, .param {
+    font-weight: bold;
+}
+
+/* @media (prefers-color-scheme: dark) {
     body {
         background-color: #222;
         color: #fefefe;
@@ -77,4 +126,7 @@ hr {
     img {
         filter: grayscale(20%);
     }
-}*/
+    pre {
+        background: #333;
+    }
+} */
