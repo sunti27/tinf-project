@@ -6,6 +6,7 @@
      --bg-code: rgb(58, 62, 68);
      --link: rgb(5, 199, 231);
      --border: black;
+     --footer-dark: rgb(30, 30, 30);
      --hl-imp: rgb(230, 98, 14);
      --hl-keyword: rgb(16, 180, 230);
      --hl-function: violet;
@@ -56,9 +57,10 @@
    grid-area: Header;
    text-align: center;
    position: sticky;
+   top: 0;
    border-bottom: 1px var(--border) solid;
    font-family: Arial, sans-serif;
-   display: inline;
+   display: block;
    background-color: var(--bg-alt);
  }
 
@@ -69,9 +71,35 @@
    display: inline;
  }
 
- nav {
+nav {
    grid-area: Menu;
    background-color: var(--bg-alt);
+   position: sticky;
+   color: var(--font);
+   text-decoration: none;
+   margin: 0;
+   border-right: 1px solid var(--border);
+ }
+
+ nav a, nav a:visited {
+   color: var(--font);
+ }
+
+ nav:link:hover {
+   color: var(--link);
+ }
+
+ nav a:hover {
+   color: rgb(31, 152, 210);
+ }
+
+ nav section {
+   margin: 3%;
+   margin-left: 5%;
+ }
+
+ nav section ol li {
+   margin-bottom: 3%;
  }
 
  main {
@@ -90,33 +118,6 @@
 
  footer a:link, footer a:visited {
    color: var(--font);
- }
-
- nav {
-   text-decoration: none;
-   margin: 0;
-   color: var(--font);
-   border-right: 1px solid var(--border);
- }
-
- nav a, nav a:visited {
-   color: var(--font);
- }
-
- nav:link:hover {
-   color: var(--link);
- }
-
- nav a:hover {
-   color: rgb(31, 152, 210);
- }
-
- nav section {
-   margin: 3%;
- }
-
- nav section ol li {
-   margin-bottom: 3%;
  }
 
  h3 a, ul a, ol a {
@@ -149,6 +150,35 @@
 
  code:before {
    content: counter(line) ". ";
+ }
+
+ footer {
+    margin: 0;
+    margin-top: 5%;
+    display: block;
+    left: 0;
+    background: green;
+ }
+
+ footer ul {
+     margin: 0;
+     padding: 0;
+     list-style-type: none;
+ }
+
+ footer ul li {
+    display: inline-block;
+    background-color: var(--footer-dark);
+    padding: 5%;
+    margin: 0;
+ }
+
+ footer ul li:hover {
+
+ }
+
+ footer ul li a {
+     margin: 0;
  }
 
  .number {
