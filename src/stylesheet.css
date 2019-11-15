@@ -1,4 +1,4 @@
- @media (prefers-color-scheme: dark) {
+ @media (prefers-color-scheme: dark) {  /* TODO: Support scrollbars for moz and for lightmode */
    :root {
      --bg-main: #222;
      --bg-alt: #333;
@@ -42,6 +42,7 @@
    scroll-behavior: smooth;
    font-size: 18px;
    color: var(--font);
+   overflow: hidden;
  }
 
  body {
@@ -79,6 +80,7 @@ nav {
    text-decoration: none;
    margin: 0;
    border-right: 1px solid var(--border);
+   overflow-y: scroll;
  }
 
  nav a, nav a:visited {
@@ -102,9 +104,30 @@ nav {
    margin-bottom: 3%;
  }
 
+nav::-webkit-scrollbar {
+     width: 0.5rem;
+     margin-right: 10px;
+ }
+
+nav::-webkit-scrollbar-thumb {
+   background-color: var(--bg-main);
+   border-radius: 5px;
+ }
+
  main {
    grid-area: Content;
    background-color: var(--bg-main);
+   overflow-y: scroll;
+ }
+
+ main::-webkit-scrollbar {
+     width: 0.5rem;
+ }
+
+ main::-webkit-scrollbar-thumb {
+   background-color: var(--bg-alt);
+   outline: 1px solid slategrey;
+   border-radius: 5px;
  }
 
  main section {
@@ -158,6 +181,7 @@ nav {
     display: block;
     left: 0;
     background: green;
+    padding: 0;
  }
 
  footer ul {
@@ -165,6 +189,7 @@ nav {
      padding: 0;
      list-style-type: none;
  }
+
 
  footer ul li {
     display: inline-block;

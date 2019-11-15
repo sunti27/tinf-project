@@ -79,4 +79,14 @@ li a:hover {
   color: white;
   transform: rotateY(180deg);
   border-radius: 5px;
+  align-content: space-around;
+}
+
+.flip-card-back p{
+  margin: 10%;
+}
+
+.flip-card-back a:link {
+  color: white;
+  text-decoration: none;
 }
