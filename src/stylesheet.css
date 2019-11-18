@@ -76,15 +76,13 @@
      position: sticky;
      top: 0;
      border-bottom: 1px var(--border) solid;
-     display: block;
+     display: table;
      background-color: var(--bg-alt);
  }
 
- .headline a img {
-     height: 2.2rem;
-     margin: 5px;
-     float: right;
-     display: inline;
+ header .headline {
+     display: table-cell;
+     vertical-align: middle;
  }
 
  nav {
@@ -238,4 +236,24 @@
 
  .number, .string, .function, .keyword, .imp {
      font-weight: bold;
+ }
+
+ @media screen and (max-width: 930px) {
+     body {
+         grid-template-areas:
+             "Menu Header"
+             "Menu Content";
+         grid-template-columns: 3fr 9fr;
+         font-size: 0.9rem;
+     }
+ }
+
+ @media screen and (max-width: 680px) {
+     body {
+         grid-template-areas:
+             "Header Header"
+             "Menu Menu"
+             "Content Content";
+        font-size: 0.5rem;
+     }
  }
