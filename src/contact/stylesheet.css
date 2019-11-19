@@ -1,9 +1,36 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main: #222;
+    --alt: #333;
+    --font: #eee;
+  }
+  body {
+    background-image: url("/images/night.jpg");
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --main: whitesmoke;
+    --alt: rgb(124, 124, 124);
+    --font: black;
+  }
+  body {
+    background-image: url("/images/day.jpg");
+  }
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--main);
+  background-size: cover;
+  background-position: center;
+  background-repeat: space;
 }
 
 header {
   margin-bottom: 1%;
+  height: 10%;
 }
 
 ul {
@@ -11,8 +38,8 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
   border-radius: 5px;
+  background-color: var(--main);
 }
 
 li {
@@ -21,14 +48,14 @@ li {
 
 li a {
   display: block;
-  color: white;
+  color: var(--font);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover {
-  background-color: #111;
+  background-color: var(--alt);
 }
 
 .cards{
