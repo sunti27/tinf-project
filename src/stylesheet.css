@@ -1,3 +1,28 @@
+
+:root {
+    --bg-main: whitesmoke;
+    --bg-alt: whitesmoke;
+    --font: black;
+    --bg-code: rgb(210, 224, 230);
+    --link: #0000EE;
+    --border: black;
+    --footer-dark: rgb(203, 203, 203);
+    --footer-hover: rgb(124, 124, 124);
+    --hl-imp: rgb(230, 98, 14);
+    --hl-keyword: blue;
+    --hl-function: purple;
+    --hl-number: orange;
+    --hl-string: rgb(18, 161, 70);
+    --scrollbar: rgb(135, 141, 144);
+}
+
+header {
+    background-image: url("/images/day.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
  @media (prefers-color-scheme: dark) {
      :root {
          --bg-main: #222;
@@ -19,32 +44,7 @@
      header {
          background-image: url("/images/night.jpg");
          background-size: cover;
-         background-position: top;
-     }
- }
-
- @media (prefers-color-scheme: light) {
-     :root {
-         --bg-main: whitesmoke;
-         --bg-alt: whitesmoke;
-         --font: black;
-         --bg-code: rgb(210, 224, 230);
-         --link: #0000EE;
-         --border: black;
-         --footer-dark: rgb(203, 203, 203);
-         --footer-hover: rgb(124, 124, 124);
-         --hl-imp: rgb(230, 98, 14);
-         --hl-keyword: blue;
-         --hl-function: purple;
-         --hl-number: orange;
-         --hl-string: rgb(18, 161, 70);
-         --scrollbar: rgb(135, 141, 144);
-     }
-
-     header {
-         background-image: url("/images/day.jpg");
-         background-size: cover;
-         background-position: center;
+         background-position: right;
      }
  }
 
@@ -76,13 +76,25 @@
      position: sticky;
      top: 0;
      border-bottom: 1px var(--border) solid;
-     display: table;
+     display: block;
      background-color: var(--bg-alt);
  }
 
  header .headline {
-     display: table-cell;
-     vertical-align: middle;
+     /* Internet Explorer 10 */
+     display: -ms-flexbox;
+     -ms-flex-pack: center;
+     -ms-flex-align: center;
+
+     /* Firefox */
+     display: -moz-box;
+     -moz-box-pack: center;
+     -moz-box-align: center;
+
+     /* Safari, Opera, and Chrome */
+     display: -webkit-box;
+     -webkit-box-pack: center;
+     -webkit-box-align: center;
  }
 
  nav {
