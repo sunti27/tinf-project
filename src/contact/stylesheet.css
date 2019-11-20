@@ -1,3 +1,12 @@
+:root {
+    --main: whitesmoke;
+    --alt: rgb(124, 124, 124);
+    --font: black;
+}
+body {
+    background-image: url("/images/day.jpg");
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --main: #222;
@@ -6,17 +15,6 @@
   }
   body {
     background-image: url("/images/night.jpg");
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --main: whitesmoke;
-    --alt: rgb(124, 124, 124);
-    --font: black;
-  }
-  body {
-    background-image: url("/images/day.jpg");
   }
 }
 
