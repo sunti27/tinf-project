@@ -4,7 +4,7 @@
     --bg-alt: whitesmoke;
     --font: black;
     --bg-code: rgb(210, 224, 230);
-    --link: #0000EE;
+    --link: rgb(20, 115, 231);
     --border: black;
     --footer-dark: rgb(203, 203, 203);
     --footer-hover: rgb(124, 124, 124);
@@ -174,13 +174,13 @@ header {
 
  pre {
      counter-reset: line;
-     border: 1px solid grey;
+     border: 1px solid var(--border);
      background-color: var(--bg-code);
      color: var(--font);
      padding: 0;
      padding: 10px;
      border-radius: 3px;
-     border-left: 5px solid rgb(48, 165, 232);
+     border-left: 5px solid var(--link);
  }
 
  code {
