@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url("/images/day.jpg");
+  background-image: url("../../images/day.jpg");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,7 +15,7 @@ body {
     --font: #eee;
   }
   body {
-    background-image: url("/images/night.jpg");
+    background-image: url("../../images/night.jpg");
   }
 }
 
@@ -24,6 +24,7 @@ body {
   background-color: var(--main);
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
 }
 
 header {
@@ -108,15 +109,6 @@ li a:hover {
   align-content: space-around;
 }
 
-<<<<<<< HEAD
-.flip-card-back p {
-  margin: 10%;
-}
-
-.flip-card-back a:link, .flip-card-back a:visited {
-  color: white;
-  text-decoration: none;
-=======
 .flip-card-back p{
   margin: 5%;
 }
@@ -126,5 +118,4 @@ li a:hover {
     width: 250px;
     height: 250px;
   }
->>>>>>> bbad0dda422ef03d3556df4c03a76f29c811e106
 }
