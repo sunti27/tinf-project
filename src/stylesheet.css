@@ -1,4 +1,3 @@
-
 :root {
     --bg-main: whitesmoke;
     --bg-alt: whitesmoke;
@@ -6,8 +5,9 @@
     --bg-code: rgb(210, 224, 230);
     --link: rgb(20, 115, 231);
     --border: black;
-    --footer-dark: rgb(203, 203, 203);
-    --footer-hover: rgb(124, 124, 124);
+    --footer: rgb(203, 203, 203);
+    --footer-dark: rgb(51, 51, 51);
+    --footer-hover: whitesmoke;
     --hl-imp: rgb(230, 98, 14);
     --hl-keyword: blue;
     --hl-function: purple;
@@ -20,10 +20,7 @@ header {
     background-image: url("/images/day.jpg");
     background-size: cover;
     background-position: center;
-}
-
-
- @media (prefers-color-scheme: dark) {
+} @media (prefers-color-scheme: dark) {
      :root {
          --bg-main: #222;
          --bg-alt: #333;
@@ -31,8 +28,9 @@ header {
          --bg-code: rgb(58, 62, 68);
          --link: rgb(5, 199, 231);
          --border: black;
-         --footer-dark: rgb(30, 30, 30);
-         --footer-hover: rgb(17, 17, 17);
+         --footer: rgb(30, 30, 30);
+         --footer-dark: #111;
+         --footer-hover: whitesmoke);
          --hl-imp: rgb(230, 98, 14);
          --hl-keyword: rgb(16, 180, 230);
          --hl-function: violet;
@@ -208,9 +206,9 @@ header {
      border-top: 1px solid var(--border);
  }
 
- footer ul li {
+ footer li {
      display: inline-block;
-     background-color: var(--footer-dark);
+     background-color: var(--footer);
      padding: 2%;
      margin: 0;
      width: 29.33%;
@@ -219,7 +217,10 @@ header {
  }
 
  footer ul li:hover {
-     box-shadow: inset 0 0 0 0.3rem var(--footer-hover);
+
+     background: var(--footer-dark);
+     color: var(--footer-hover);
+
  }
 
  footer a:link, footer a:visited {
@@ -268,4 +269,10 @@ header {
              "Content Content";
         font-size: 0.5rem;
      }
+
+     nav {
+
+     }
+
+
  }

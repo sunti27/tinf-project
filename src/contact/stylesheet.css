@@ -14,7 +14,7 @@ body {
     --alt: #333;
     --font: #eee;
   }
-  
+
   body {
     background-image: url("../../images/night.jpg");
   }
@@ -99,15 +99,20 @@ li a:hover {
   background-color: #bbb;
   color: black;
   border-radius: 5px;
+
 }
 
 .flip-card-back {
-  background-color: #2980b9;
   color: white;
   transform: rotateY(180deg);
   border-radius: 5px;
   align-content: space-around;
+  background-image: url("../../images/back_tobi.jpeg");
+  background-size: cover;
+  background-position: top center;
 }
+
+
 
 .flip-card-back p{
   margin: 5%;
