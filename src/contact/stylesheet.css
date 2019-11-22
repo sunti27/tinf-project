@@ -25,6 +25,7 @@ body {
   background-color: var(--main);
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
 }
 
 header {
