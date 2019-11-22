@@ -14,6 +14,7 @@ body {
     --alt: #333;
     --font: #eee;
   }
+  
   body {
     background-image: url("../../images/night.jpg");
   }
@@ -24,7 +25,6 @@ body {
   background-color: var(--main);
   background-attachment: fixed;
   background-size: cover;
-  background-position: center;
 }
 
 header {
@@ -114,6 +114,10 @@ li a:hover {
 }
 
 @media screen and (max-width: 350px) {
+  body {
+    background-position: center;
+  }
+
   .flip-card{
     width: 250px;
     height: 250px;
