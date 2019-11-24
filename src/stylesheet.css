@@ -151,6 +151,7 @@ header {
 
  main section article ol li {
      margin: 1%;
+     font-weight: bold;
  }
 
  main a:link, main a:visited {
@@ -187,7 +188,7 @@ header {
      top: 0;
      background-color: var(--bg-code);
      display: block;
-     box-shadow: 0 3px 3px -2px var(--border);
+     box-shadow: 0 2px 4px -2px var(--border);
      margin-bottom: 10px;
  }
 
@@ -211,7 +212,7 @@ header {
      color: var(--font);
      border-radius: 3px;
      padding: 2px;
-     border: 1px inset var(--border);
+     /* border: 1px solid var(--border); */
  }
 
  footer {
