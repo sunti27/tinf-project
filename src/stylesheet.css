@@ -13,6 +13,7 @@
     --hl-function: purple;
     --hl-number: orange;
     --hl-string: rgb(18, 161, 70);
+    --hl-comment: #444;
     --scrollbar: rgb(135, 141, 144);
 }
 
@@ -20,7 +21,9 @@ header {
     background-image: url("/images/day.jpg");
     background-size: cover;
     background-position: center;
-} @media (prefers-color-scheme: dark) {
+}
+
+@media (prefers-color-scheme: dark) {
      :root {
          --bg-main: #222;
          --bg-alt: #333;
@@ -31,12 +34,13 @@ header {
          --footer: rgb(30, 30, 30);
          --footer-dark: #111;
          --footer-hover: whitesmoke);
-         --hl-imp: rgb(230, 98, 14);
+         --hl-imp: rgb(233, 121, 121);
          --hl-keyword: rgb(16, 180, 230);
          --hl-function: violet;
          --hl-number: orange;
-         --hl-string: lime;
-         --scrollbar: #111;
+         --hl-string: rgb(110, 222, 128);
+         --hl-comment: #999;
+         --scrollbar: #aaa;
      }
 
      header {
@@ -123,12 +127,12 @@ header {
      margin-bottom: 3%;
  }
 
- nav::-webkit-scrollbar {
+::-webkit-scrollbar {
      width: 0.5rem;
      margin-right: 10px;
  }
 
- nav::-webkit-scrollbar-thumb {
+ ::-webkit-scrollbar-thumb {
      background-color: var(--scrollbar);
      border-radius: 5px;
  }
@@ -140,18 +144,13 @@ header {
      scroll-behavior: smooth;
  }
 
- main::-webkit-scrollbar {
-     width: 0.5rem;
- }
-
- main::-webkit-scrollbar-thumb {
-     background-color: var(--scrollbar);
-     outline: 1px solid slategrey;
-     border-radius: 5px;
- }
-
  main section {
      margin: 3%;
+     width: 90%;
+ }
+
+ main section article ol li {
+     margin: 1%;
  }
 
  main a:link, main a:visited {
@@ -167,7 +166,6 @@ header {
  hr {
      border: 0;
      border-top: 1px var(--border) solid;
-     margin: 1%;
  }
 
  pre {
@@ -176,19 +174,44 @@ header {
      background-color: var(--bg-code);
      color: var(--font);
      padding: 0;
-     padding: 10px;
-     border-radius: 3px;
+     border-radius: 5px;
      border-left: 5px solid var(--link);
+     max-height: 16rem;
+     overflow-y: auto;
  }
 
- code {
+ pre h6 {
+     margin: 0;
+     padding: 5px;
+     position: sticky;
+     top: 0;
+     background-color: var(--bg-code);
+     display: block;
+     box-shadow: 0 3px 3px -2px var(--border);
+     margin-bottom: 10px;
+ }
+
+ pre code {
      counter-increment: line;
      margin: 0;
      float: left;
+     margin-left: 10px;
  }
 
- code:before {
+ pre code:last-child {
+     margin-bottom: 10px;
+ }
+
+ pre code:before {
      content: counter(line) ". ";
+ }
+
+ :not(pre) > code {
+     background-color: var(--bg-code);
+     color: var(--font);
+     border-radius: 3px;
+     padding: 2px;
+     border: 1px inset var(--border);
  }
 
  footer {
@@ -247,7 +270,7 @@ header {
      color: var(--hl-imp);
  }
 
- .number, .string, .function, .keyword, .imp {
+ .number, .function, .keyword {
      font-weight: bold;
  }
 
@@ -273,6 +296,4 @@ header {
      nav {
 
      }
-
-
  }
