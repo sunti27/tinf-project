@@ -64,10 +64,17 @@
                 <ol>
                     <li id="i1">Creating a discord bot application</li>
                     <article> First, you go to the <a target="_blank" href="https://discordapp.com/developers/applications/">Discord</a> developer website. Then you need to login with your Discord account, if you aren't already logged in. The next
-                        step is to create an new application. You will find that button in the top right corner.
+                        step is to create a new application. You will find that button in the top right corner. Then you have to enter the name of your bot/application and click create.
+                        <br><br>After this you have to add a bot to your application, to do this select it, then go into the menu "Bot", which you find on the left side of the page. Then click on the button "Add Bot" and confirm the action.
                     </article>
                     <li id="i2">Authorize your bot</li>
-                    <article></article>
+                    <article>The next step is to authorize your bot/add it to a server, to do this you have to replace ID_OF_YOUR_BOT with the client id of your bot, which you an find in the menu "General Information", in the following url. After this you just have to copy and paste it into your browser.
+                      <br><br><code>https://discordapp.com/api/oauth2/authorize?client_id=ID_OF_YOUR_BOT&scope=bot&permissions=1</code>
+                      <br><br>On the website that appears you have to add one of your servers via the dropdown menu, then you just click Authorize and it should appear on that server.
+                      <br><br>Now you just have to give your bot the permissions he needs for his job,
+                       which you can do on your discord server threw the role that gets created by adding him.
+                       Or you can do it the fancy way, while you are adding it by creating a permission integer in the "Bot" menu on the developer portal and replacing the 1 at the end of the url with it.
+                    </article>
                     <li id="i3">Install the discord library for python</li>
                     <article>You can write discord bots on a variety of programming lanuguages, on this website we are only going to talk about the process in python.</article>
                 </ol>
