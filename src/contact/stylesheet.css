@@ -52,6 +52,11 @@ header a:hover {
   background-color: var(--alt);
 }
 
+.Rank {
+  color: lightgrey;
+  font-size: 90%;
+}
+
 .cards {
   padding-top: 7%;
   text-align: center;

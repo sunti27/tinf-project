@@ -1,4 +1,4 @@
-:root {
+ /* :root {
     --bg-main: whitesmoke;
     --bg-alt: whitesmoke;
     --font: black;
@@ -23,7 +23,7 @@ header {
     background-position: center;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) { */
      :root {
          --bg-main: #222;
          --bg-alt: #333;
@@ -48,14 +48,14 @@ header {
          background-size: cover;
          background-position: right;
      }
- }
+/* } */
 
  html, body {
      margin: 0;
      padding: 0;
      width: 100%;
      height: 100%;
-     font-family: Roboto;
+     font-family: "Roboto";
      font-weight: lighter;
      scroll-behavior: smooth;
      font-size: 18px;
@@ -64,13 +64,23 @@ header {
  }
 
  body {
-     display: grid;
+    display: grid;
      grid-template-areas:
          "Header Header"
          "Menu Content";
      grid-template-columns: 3fr 10fr;
      grid-template-rows: 1fr 10fr;
  }
+
+ ::-webkit-scrollbar {
+      width: 0.5rem;
+      margin-right: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background-color: var(--scrollbar);
+      border-radius: 5px;
+  }
 
  header {
      grid-area: Header;
@@ -110,32 +120,27 @@ header {
      overflow-y: scroll;
  }
 
- nav a:link, nav a:visited {
+ /* nav a:link, nav a:visited {
      color: var(--font);
- }
-
- nav a:hover {
-     color: var(--link);
- }
+ } */
 
  nav section {
      margin: 3%;
      margin-left: 5%;
  }
 
- nav section ol li {
+ nav li {
      margin-bottom: 3%;
  }
 
-::-webkit-scrollbar {
-     width: 0.5rem;
-     margin-right: 10px;
- }
+ nav .link {
+      color: var(--font);
+      text-decoration: none;
+  }
 
- ::-webkit-scrollbar-thumb {
-     background-color: var(--scrollbar);
-     border-radius: 5px;
- }
+  nav .link:hover {
+      color: var(--link);
+  }
 
  main {
      grid-area: Content;
@@ -154,14 +159,9 @@ header {
      font-weight: bold;
  }
 
- main a:link, main a:visited {
+ main .link {
      text-decoration: none;
      color: var(--link);
- }
-
- h3 a, ul a, ol a {
-     color: white;
-     text-decoration: none;
  }
 
  hr {
@@ -169,7 +169,15 @@ header {
      border-top: 1px var(--border) solid;
  }
 
- pre {
+ img {
+   float: right;
+   margin: 0.5rem;
+   width: 15rem;
+   clear: both;
+ }
+
+
+ .code.block {
      counter-reset: line;
      border: 1px solid var(--border);
      background-color: var(--bg-code);
@@ -181,38 +189,41 @@ header {
      overflow-y: auto;
  }
 
- pre h6 {
+ .code.block .filename {
      margin: 0;
-     padding: 5px;
      position: sticky;
      top: 0;
      background-color: var(--bg-code);
      display: block;
      box-shadow: 0 2px 4px -2px var(--border);
      margin-bottom: 10px;
+     padding: 5px;
  }
 
- pre code {
+ .code.line {
      counter-increment: line;
      margin: 0;
      float: left;
      margin-left: 10px;
+     display: inline-block;
+     font-size: 0.9rem;
  }
 
- pre code:last-child {
+ .code.line:last-child {
      margin-bottom: 10px;
  }
 
- pre code:before {
+ .code.line:before {
      content: counter(line) ". ";
  }
 
- :not(pre) > code {
+ .code.inline {
      background-color: var(--bg-code);
      color: var(--font);
      border-radius: 3px;
-     padding: 2px;
-     /* border: 1px solid var(--border); */
+     padding: 3px;
+     font-family: monospace;
+     font-size: 0.9rem;
  }
 
  footer {
@@ -269,6 +280,19 @@ header {
 
  .imp {
      color: var(--hl-imp);
+ }
+
+ .Show_button {
+   vertical-align: center;
+   font-size: 85%;
+   padding: 0.6rem;
+   background: #7289da;
+   color: white;
+   font-family: inherit;
+   font-weight: lighter;
+   border-radius: 3px;
+   display: inline-block;
+
  }
 
  .number, .function, .keyword {
