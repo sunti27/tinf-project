@@ -75,10 +75,10 @@
                     <article>
                       <p>
                         First of all, go to the <a class="link" target="_blank" href="https://discordapp.com/developers/applications/">Discord</a> developer website. Then you need to login with your Discord account, if you aren't already logged in. The next
-                        step is to create a <span class="Show_button">New Application</span> You will find that button in the top right corner. Then you have to enter the name of your bot/application and click <span class ="Show_button">Create</span>
+                        step is to create a <span class="discord-button">New Application</span> You will find that button in the top right corner. Then you have to enter the name of your bot/application and click <span class="discord-button">Create</span>
                       </p>
                       <p>
-                        After this you have to add a bot to your application, to do this select it, then go into the menu "Bot", which you find on the left side of the page. Then click on the button <span class="Show_button">Add Bot</span> and confirm the action.
+                        After this you have to add a bot to your application, to do this select it, then go into the menu "Bot", which you find on the left side of the page. Then click on the button <span class="discord-button">Add Bot</span> and confirm the action.
                       </p>
                     </article>
                     <li id="i2">Authorize your bot</li>
@@ -154,7 +154,7 @@
                         After doing this we create an object from the bot class.
                         <pre class="code block"><!--
                         --><h6 class="filename">main.py</h6><!--
-                        --><code class="code line">bot = commands.Bot(<span class="imp">command_prefix</span>=<span class="string">"&lt;your_prefix&gt;"</span>)</code><!--
+                        --><code class="code line">bot = commands.<span class="fat">Bot</span>(<span class="imp">command_prefix</span>=<span class="string">"&lt;your_prefix&gt;"</span>)</code><!--
                      --></pre>
                         We are now able to add commands and events. An important event is the <code>on_ready</code> event. Lets add this to our code.
                         <pre class="code block"><!--
@@ -174,7 +174,7 @@
                         --><code class="code line"><span class="keyword">import</span> discord</code>
                             <code class="code line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</code>
                             <code class="code line"></code>
-                            <code class="code line">bot = commands.Bot(<span class="imp">command_prefix</span>=<span class="string">"!"</span>)</code>
+                            <code class="code line">bot = commands.<span class="fat">Bot</span>(<span class="imp">command_prefix</span>=<span class="string">"!"</span>)</code>
                             <code class="code line"></code>
                             <code class="code line"><span class="imp">@bot.listen</span>(<span class="string">"on_ready"</span>)</code>
                             <code class="code line"><span class="keyword">def</span> on_ready_event():</code>
@@ -184,8 +184,8 @@
                      --></pre>
                         <p>You can run the file by either running it in your ide or in the console by typing:</p>
                         <p><code class="code inline">cd /path/to/directory</code></p>
-                        <p>Windows: <code>python main.py</code></p>
-                        <p>MacOS and Linux: <code>python3 main.py</code></p>
+                        <p>Windows: <code class="code inline">python main.py</code></p>
+                        <p>MacOS and Linux: <code class="code inline">python3 main.py</code></p>
                         Congratulation, you created your first discord bot :)
                     </article>
                     <li id="b2">Adding commands</li>

@@ -129,6 +129,10 @@ header {
      margin-left: 5%;
  }
 
+/* nav ol {
+    list-style-type: none;
+} */
+
  nav li {
      margin-bottom: 3%;
  }
@@ -282,10 +286,10 @@ header {
      color: var(--hl-imp);
  }
 
- .Show_button {
+ .discord-button {
    vertical-align: center;
-   font-size: 85%;
-   padding: 0.6rem;
+   font-size: 0.6rem;
+   padding: 0.3rem;
    background: #7289da;
    color: white;
    font-family: inherit;
@@ -295,7 +299,7 @@ header {
 
  }
 
- .number, .function, .keyword {
+ .number, .function, .keyword, .imp, .fat {
      font-weight: bold;
  }
 
