@@ -74,6 +74,7 @@ header {
 
  ::-webkit-scrollbar {
       width: 0.5rem;
+      height: 0.5rem;
       margin-right: 10px;
   }
 
@@ -174,10 +175,15 @@ header {
  }
 
  img {
-   float: right;
-   margin: 0.5rem;
-   width: 15rem;
+
+   margin: 0 auto;
+   width: 25%;
    clear: both;
+   border-radius: 0.3rem;
+   transition: transform 0.3s;
+
+
+
  }
 
 
@@ -264,6 +270,10 @@ header {
 
  footer a:link, footer a:visited {
      color: var(--font);
+ }
+
+ img:hover {
+   transform: scale(2.5);
  }
 
  .number {
