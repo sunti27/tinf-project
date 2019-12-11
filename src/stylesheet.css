@@ -313,16 +313,33 @@ header {
      }
  }
 
- @media screen and (max-width: 680px) {
+ @media screen and (max-width: 600px) {
      body {
          grid-template-areas:
              "Header Header"
              "Menu Menu"
              "Content Content";
+        grid-template-rows: 2fr 1fr 20fr;
         font-size: 0.5rem;
      }
 
-     nav {
+    nav {
+        position: initial;
+        border: none;
+    }
 
+    nav section, nav h3 {
+        display: contents;
+    }
+
+     nav .link {
+         display: inline-block;
+         border: 1px solid black;
+         border-top: none;
+         width: 16.67%;
+         margin: 0;
+     }
+     nav ol, nav hr {
+         display: none;
      }
  }
