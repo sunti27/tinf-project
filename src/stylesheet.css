@@ -178,9 +178,12 @@ header {
 
    margin: 0 auto;
    width: 25%;
-   clear: both;
    border-radius: 0.3rem;
    transition: transform 0.3s;
+   display: block;
+   text-align: center;
+
+
 
 
 
@@ -273,7 +276,10 @@ header {
  }
 
  img:hover {
-   transform: scale(2.5);
+   transform: scale(3);
+   z-index: 2;
+
+
  }
 
  .number {
@@ -330,7 +336,7 @@ header {
              "Menu Menu"
              "Content Content";
         grid-template-rows: 2fr 1fr 25fr;
-        font-size: 0.5rem;
+        font-size: 0.6rem;
      }
 
     nav {
@@ -371,9 +377,17 @@ header {
          -webkit-box-align: center;
      }
 
-    
+
 
      nav ol, nav hr {
          display: none;
      }
+
+      .code.inline{
+        font-size: 0.6rem;
+      }
+
+      .code .line{
+        font-size: 0.6rem;
+      }
  }
