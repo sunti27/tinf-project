@@ -329,26 +329,50 @@ header {
              "Header Header"
              "Menu Menu"
              "Content Content";
-        grid-template-rows: 2fr 1fr 20fr;
+        grid-template-rows: 2fr 1fr 25fr;
         font-size: 0.5rem;
      }
 
     nav {
-        position: initial;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
         border: none;
+        align-items: baseline;
+        border-bottom: 1px solid black;
+        overflow: none;
     }
 
     nav section, nav h3 {
         display: contents;
     }
 
-     nav .link {
+     nav .link.mobile {
          display: inline-block;
-         border: 1px solid black;
-         border-top: none;
+         overflow: none;
          width: 16.67%;
+         height: 100%;
          margin: 0;
+         text-align: center;
+         font-size: 85%;
+         /* Internet Explorer 10 */
+         display: -ms-flexbox;
+         -ms-flex-pack: center;
+         -ms-flex-align: center;
+
+         /* Firefox */
+         display: -moz-box;
+         -moz-box-pack: center;
+         -moz-box-align: center;
+
+         /* Safari, Opera, and Chrome */
+         display: -webkit-box;
+         -webkit-box-pack: center;
+         -webkit-box-align: center;
      }
+
+    
+
      nav ol, nav hr {
          display: none;
      }
