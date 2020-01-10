@@ -1,4 +1,4 @@
- /* :root {
+ :root {
     --bg-main: whitesmoke;
     --bg-alt: whitesmoke;
     --font: black;
@@ -23,7 +23,7 @@ header {
     background-position: center;
 }
 
-@media (prefers-color-scheme: dark) { */
+@media (prefers-color-scheme: dark) {
      :root {
          --bg-main: #222;
          --bg-alt: #333;
@@ -48,7 +48,7 @@ header {
          background-size: cover;
          background-position: right;
      }
-/* } */
+}
 
  html, body {
      margin: 0;
@@ -130,9 +130,9 @@ header {
      margin-left: 5%;
  }
 
-/* nav ol {
+nav ol {
     list-style-type: none;
-} */
+}
 
  nav li {
      margin-bottom: 3%;
@@ -335,7 +335,7 @@ header {
              "Header Header"
              "Menu Menu"
              "Content Content";
-        grid-template-rows: 2fr 1fr 25fr;
+        grid-template-rows: 1fr 0.75fr 13fr;
         font-size: 0.6rem;
      }
 
@@ -344,13 +344,14 @@ header {
         flex-wrap: nowrap;
         justify-content: center;
         border: none;
-        align-items: baseline;
+        align-items: center;
         border-bottom: 1px solid black;
-        overflow: none;
+        overflow: hidden;
     }
 
     nav section, nav h3 {
         display: contents;
+        overflow: hidden;
     }
 
      nav .link.mobile {
@@ -360,6 +361,7 @@ header {
          height: 100%;
          margin: 0;
          text-align: center;
+         overflow: hidden;
          font-size: 85%;
          /* Internet Explorer 10 */
          display: -ms-flexbox;
@@ -383,11 +385,16 @@ header {
          display: none;
      }
 
-      .code.inline{
+      .code.inline {
+        font-size: 0.6rem;
+        padding: 1px;
+      }
+
+      .code.line {
         font-size: 0.6rem;
       }
 
-      .code .line{
-        font-size: 0.6rem;
+      img {
+          width: 90%;
       }
  }
