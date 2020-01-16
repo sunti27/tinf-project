@@ -1,37 +1,64 @@
+:root {
+    --main: whitesmoke;
+    --alt: rgb(124, 124, 124);
+    --font: black;
+}
+
+body {
+  background-image: url("../../images/day.jpg");
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main: #222;
+    --alt: #333;
+    --font: #eee;
+  }
+
+  body {
+    background-image: url("../../images/night.jpg");
+  }
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--main);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 header {
   margin-bottom: 1%;
+  height: 10%;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  border-radius: 5px;
+header h2 {
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: var(--main);
 }
 
-li {
-  float: left;
+header a, header a:link, header a:visited {
+    color: var(--font);
+    text-decoration: none;
+    padding: 1rem;
+    display: inline-block;
+    transition: all 300ms ease;
+    border-radius: 5px;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+header a:hover {
+  background-color: var(--alt);
 }
 
-li a:hover {
-  background-color: #111;
+.Rank {
+  color: lightgrey;
+  font-size: 90%;
 }
 
-.cards{
+.cards {
+  padding-top: 7%;
   text-align: center;
 }
 
@@ -43,6 +70,8 @@ li a:hover {
   display: inline-block;
   border-radius: 5px;
   margin: 3%;
+  width: 300px;
+  height: 300px;
 }
 
 .flip-card-inner {
@@ -53,7 +82,6 @@ li a:hover {
   transition: transform 0.6s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
 }
 
 .flip-card:hover .flip-card-inner {
@@ -66,27 +94,48 @@ li a:hover {
   height: 100%;
   backface-visibility: hidden;
   border-radius: 5px;
+  background-size: cover;
+  background-position: top center;
 }
 
 .flip-card-front {
-  background-color: #bbb;
-  color: black;
-  border-radius: 5px;
+}
+
+#ls .flip-card-front {
+    background-image: url("../../images/ls.jpeg");
+}
+
+#dr .flip-card-front {
+    background-image: url("../../images/dr.jpeg");
+}
+
+#tw .flip-card-front {
+    background-image: url("../../images/tw.jpeg");
 }
 
 .flip-card-back {
-  background-color: #2980b9;
+    background-color: var(--main);
+    color: var(--font);
+}
+
+
+.flip-card-back {
   color: white;
   transform: rotateY(180deg);
-  border-radius: 5px;
   align-content: space-around;
 }
 
-.flip-card-back p{
-  margin: 10%;
+.flip-card-back p {
+  margin: 5%;
 }
 
-.flip-card-back a:link {
-  color: white;
-  text-decoration: none;
+@media screen and (max-width: 350px) {
+  body {
+    background-position: center;
+  }
+
+  .flip-card {
+    width: 250px;
+    height: 250px;
+  }
 }

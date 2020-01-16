@@ -18,83 +18,207 @@
     </header>
     <nav>
         <section>
-            <h3><a href="#introduction">Introduction</a></h3>
+            <h3><a class="link mobile" href="#introduction">Introduction</a></h3>
         </section>
         <hr>
         <section>
-            <h3><a href="#getting-started">Getting Started</a></h3>
+            <h3><a class="link mobile" href="#getting-started">Getting Started</a></h3>
             <ol>
-                <li>Creating a discord bot application</li>
-                <li>Authorize your bot</li>
-                <li>Choose your programming language</li>
-                <li>Install the discord library</li>
+                <li><a class="link" href="#i1">Creating a discord bot application</a></li>
+                <li><a class="link" href="#i2">Authorize your bot</a></li>
+                <li><a class="link" href="#i3">Installing Python</a></li>
+                <li><a class="link" href="#i4">Install the discord library</a></li>
             </ol>
         </section>
         <section>
-            <h3><a href="#basics">Basics</a></h3>
+            <h3><a class="link mobile" href="#python">Python</a></h3>
             <ol>
-                <li>Creating a basic bot</li>
-                <li>Adding commands</li>
-                <li>Adding events</li>
-                <li>Embeds</li>
+                <li><a class="link" href="#p1">Hello world</a></li>
+                <li><a class="link" href="#p2">Variables</a></li>
+                <li><a class="link" href="#p3">Calculations</a></li>
+                <li><a class="link" href="#p4">Functions</a></li>
+                <li><a class="link" href="#p5">Modules</a></li>
             </ol>
         </section>
         <section>
-            <h3><a href="#advanced">Advanced</a></h3>
+            <h3><a class="link mobile" href="#basics">Basics</a></h3>
             <ol>
-                <li>Customisable status messages</li>
-                <li>Customisable prefixes</li>
-                <li>Groups</li>
-                <li>Extensions</li>
+                <li><a class="link" href="#b1">Creating a basic bot</a></li>
+                <li><a class="link" href="#b2">Adding commands</a></li>
+                <li><a class="link" href="#b3">Adding events</a></li>
+                <li><a class="link" href="#b4">Embeds</a></li>
+            </ol>
+        </section>
+        <section>
+            <h3><a class="link mobile" href="#advanced">Advanced</a></h3>
+            <ol>
+                <li><a class="link" href="#a1">Customisable status messages</a></li>
+                <li><a class="link" href="#a2">Customisable prefixes</a></li>
+                <li><a class="link" href="#a3">Groups</a></li>
+                <li><a class="link" href="#a4">Extensions</a></li>
             </ol>
         </section>
         <hr>
         <section>
-            <h3><a href="#impressum">Impressum</a></h3>
+            <h3><a class="link mobile" href="#information">Information</a></h3>
         </section>
     </nav>
     <main>
         <section>
             <h2 id="introduction">Introduction</h2>
-            <article> This is a tutorial on how to make a discord bot in the programming language python.
-                <pre>
-                    <code>print 10</code><!--
-             --></pre>
-            </article>
+            <article> This is a tutorial on how to make a discord bot in the programming language python. </article>
         </section>
         <hr>
         <section id="tutorial">
             <h2 id="getting-started">Getting started</h2>
             <article>
                 <ol>
-                    <li>Creating a discord bot application</li>
-                    <article> First, you go to the <a target="_blank" href="https://discordapp.com/developers/applications/">Discord</a> developer website. Then you need to login with your Discord account, if you aren't already logged in. The next
-                        step is to create an new application. You will find that button in the top right corner.
+                    <li id="i1">Creating a discord bot application</li>
+                    <article>
+                      <p>
+                        First of all, go to the <a class="link" target="_blank" href="https://discordapp.com/developers/applications/">Discord developer</a> website. There you need to login with your Discord account, if you haven't already. The next
+                        step is to create a <span class="discord-button">New Application</span> You will find that button in the top right corner. Then you have to enter the name of your bot/application and click <span class="discord-button">Create</span>
+                      </p>
+                      <p>
+                        After this you have to add a bot to your application, to do this select it, then go into the menu "Bot", which you find on the left side of the page. Then click <span class="discord-button">Add Bot</span> and confirm the action.
+                      </p>
                     </article>
+                    <li id="i2">Authorize your bot</li>
+                    <article>
+                      <p>
+                        The next step is to authorize your bot/add it to a server, to do this you have to replace ID_OF_YOUR_BOT with the client id of your bot, which you an find in the menu "General Information", in the following url. After this you just have to copy and paste it into your browser.
+                      </p>
+                      <code class="code inline">https://discordapp.com/api/oauth2/authorize?client_id=&lt;ID_OF_YOUR_BOT&gt;&scope=bot&permissions=1</code>
+                      <p>
+                        On the website that appears you have to add one of your servers via the dropdown menu, then you just click Authorize and it should magically appear on that server.
+                      </p>
+                      <p>
+                        Now you just have to give your bot the permissions he needs for his job,
+                        which you can do on your discord server threw the role that gets created by adding him.
+                        Or you can do it the fancy way, while you are adding it by creating a permission integer in the "Bot" menu on the developer portal and replacing the 1 at the end of the url with it.
+                     </p>
+                    </article>
+                    <li id="i3">Installing Python</li>
+                    <article>
+                      <p>
+                        Now you have to install python, you can also use another programming lanuguage, since you probably already read the title, you know that this site is focusing on python.
+                      </p>
+
+                      <p>
+                        You can find the latest version of python <a class="link" target="_blank" href="https://www.python.org/downloads/">here</a>, on the site just click download button and run the downloaded executeable.
+                      </p>
+                      <img src="../images/installer/installer1.png" alt="">
+                      <p>
+                        A window like this should open. Before you proceed make sure you tick the checkbox next to <code class="code inline">ADD Python *.* to PATH</code> and then you are free to proceed clicking <code class= "code inline">INSTALL NOW</code>.
+                      </p>
+                      <p>
+                        You might have to validate your action by clicking <code class="code inline">OK</code>, after this you just have to wait.
+                      </p>
+
+                      <div>
+                        <img src="../images/installer/installer3.png" alt="">
+                        <p>
+                          When the installer finished his job you should see the following window. Now you are nearly ready to go.
+                        </p>
+                      </div>
+                    </article>
+                    <li id="i4">Install the discord library for python</li>
+                    <article>
+                      <p>
+                        The final step before you are able to start coding, is the installation of the discord library.
+                      </p>
+
+                    </article>
+                </ol>
+            </article>
+            <h2 id="python">Python Tutorial</h2>
+            <article>
+                <ol>
+                    <li id="p1">-</li>
+                    <article></article>
+                    <li id="p2">-</li>
+                    <article></article>
+                    <li id="p3">-</li>
+                    <article></article>
                 </ol>
             </article>
             <h2 id="basics">Basics</h2>
             <article>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <ol>
+                    <li id="b1">Creating a basic bot</li>
+                    <article>
+                        Now we can start programming the bot. First, we have to import the installed discord libraries. <br>
+                        This will look like this:
+                        <pre class="code block"><!--
+                        --><h6 class="filename">main.py</h6><!--
+                        --><code class="code line"><span class="keyword">import</span> discord</code><!--
+                        --><code class="code line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</code><!--
+                     --></pre>
+                        Now we've got access to all of the required modules.
+                        After doing this we create an object from the bot class.
+                        <pre class="code block"><!--
+                        --><h6 class="filename">main.py</h6><!--
+                        --><code class="code line">bot = commands.<span class="fat">Bot</span>(<span class="imp">command_prefix</span>=<span class="string">"&lt;your_prefix&gt;"</span>)</code><!--
+                     --></pre>
+                        We are now able to add commands and events. An important event is the <code>on_ready</code> event. Lets add this to our code.
+                        <pre class="code block"><!--
+                        --><h6 class="filename">main.py</h6><!--
+                        --><code class="code line"><span class="imp">@bot.listen</span>(<span class="string">"on_ready"</span>)</code>
+                            <code class="code line"><span class="keyword">def</span> on_ready_event():</code>
+                            <code class="code line">    <span class="function">print</span>(<span class="string">f"Logged in as: {bot.user}"</span>)</code><!--
+                     --></pre>
+                        In the end, we need one more line:
+                        <pre class="code block"><!--
+                        --><h6 class="filename">main.py</h6><!--
+                         --><code class="code line">bot.run(&lt;your_token&gt;)</code><!--
+                     --></pre>
+                        After doing all of this you can run your file, which looks like this: (prefix and token are just examples)
+                        <pre class="code block"><!--
+                        --><h6 class="filename">main.py</h6><!--
+                        --><code class="code line"><span class="keyword">import</span> discord</code>
+                            <code class="code line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</code>
+                            <code class="code line"></code>
+                            <code class="code line">bot = commands.<span class="fat">Bot</span>(<span class="imp">command_prefix</span>=<span class="string">"!"</span>)</code>
+                            <code class="code line"></code>
+                            <code class="code line"><span class="imp">@bot.listen</span>(<span class="string">"on_ready"</span>)</code>
+                            <code class="code line"><span class="keyword">def</span> on_ready_event():</code>
+                            <code class="code line">    <span class="function">print</span>(<span class="string">f"Logged in as: {bot.user}"</span>)</code>
+                            <code class="code line"> </code><!--
+                            --><code class="code line">bot.run(<span class="string">"NDgxMDk2NTUxOAA5MTU1MDg4.Xdp6PA.dcE076j1NnNhk7gfnlgeF0txN-4"</span>)</code><!--
+                     --></pre>
+                        <p>You can run the file by either running it in your ide or in the console by typing:</p>
+                        <p><code class="code inline">cd /path/to/directory</code></p>
+                        <p>Windows: <code class="code inline">python main.py</code></p>
+                        <p>MacOS and Linux: <code class="code inline">python3 main.py</code></p>
+                        Congratulation, you created your first discord bot :)
+                    </article>
+                    <li id="b2">Adding commands</li>
+                    <article></article>
+                    <li id="b3">Adding events</li>
+                    <article></article>
+                    <li id="b4">Embeds</li>
+                    <article></article>
+                </ol>
             </article>
             <h2 id="advanced">Advanced</h2>
             <article>
+                <ol>
+                    <li id="a1">Customisable status messages</li>
+                    <article></article>
+                    <li id="a2">Customisable prefixes</li>
+                    <article></article>
+                    <li id="a3">Groups</li>
+                    <article></article>
+                    <li id="a4">Extensions</li>
+                    <article></article>
+                </ol>
             </article>
         </section>
-        <footer id="impressum">
+        <footer id="information">
             <ul>
-                <li><a href="./contact/index.html">Contact</a></li><!--
-             --><li><a href="">About</a></li><!--
-             --><li><a href="https://www.tipeeestream.com/mrbadcrafter/donation">Donation</a></li>
+                <a href="./contact/index.html"><li>Contact</li></a><!--
+             --><a href="./about/index.html"><li>About</li></a><!--
+             --><a href="https://www.tipeeestream.com/mrbadcrafter/donation"><li>Donation</li></a>
             </ul>
         </footer>
     </main>
