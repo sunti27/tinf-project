@@ -67,9 +67,10 @@ header {
     display: grid;
      grid-template-areas:
          "Header Header"
-         "Menu Content";
-     grid-template-columns: 3fr 10fr;
-     grid-template-rows: 1fr 10fr;
+         "Footer Menu"
+         "Content Menu";
+     grid-template-columns: 10fr 3fr;
+     grid-template-rows: 1fr 1fr 10fr;
  }
 
  ::-webkit-scrollbar {
@@ -241,17 +242,19 @@ nav ol {
 
  footer {
      margin: 0;
-     margin-top: 5%;
      display: block;
      left: 0;
      padding: 0;
+     grid-area: "Footer";
+     position: sticky;
+     width: 100%;
  }
 
  footer ul {
      margin: 0;
      padding: 0;
      list-style-type: none;
-     border-top: 1px solid var(--border);
+     border-bottom: 1px solid var(--border);
  }
 
  footer li {
@@ -316,8 +319,9 @@ nav ol {
      body {
          grid-template-areas:
              "Menu Header"
+             "Menu Footer"
              "Menu Content";
-         grid-template-columns: 3fr 9fr;
+         grid-template-columns: 3fr 2fr 9fr;
          font-size: 0.9rem;
      }
  }
@@ -327,8 +331,9 @@ nav ol {
          grid-template-areas:
              "Header Header"
              "Menu Menu"
+             "Footer Footer"
              "Content Content";
-        grid-template-rows: 1fr 0.75fr 13fr;
+        grid-template-rows: 1fr 0.75fr 1 13fr;
         font-size: 0.6rem;
      }
 
