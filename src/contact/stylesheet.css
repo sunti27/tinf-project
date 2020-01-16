@@ -102,28 +102,22 @@ header a:hover {
 }
 
 #ls .flip-card-front {
-    background-image: url();
-}
-
-#ls .flip-card-back {
-    background-image: url();
-}
-
-#tw .flip-card-front {
-    background-image: url("../../images/tw/front.jpeg");
-}
-
-#tw .flip-card-back {
-    background-image: url("../../images/tw/back.jpeg");
+    background-image: url("../../images/ls.jpeg");
 }
 
 #dr .flip-card-front {
-    background-image: url();
+    background-image: url("../../images/dr.jpeg");
 }
 
-#dr .flip-card-back {
-    background-image: url();
+#tw .flip-card-front {
+    background-image: url("../../images/tw.jpeg");
 }
+
+.flip-card-back {
+    background-color: var(--main);
+    color: var(--font);
+}
+
 
 .flip-card-back {
   color: white;
@@ -140,7 +134,7 @@ header a:hover {
     background-position: center;
   }
 
-  .flip-card{
+  .flip-card {
     width: 250px;
     height: 250px;
   }

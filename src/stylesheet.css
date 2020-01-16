@@ -179,14 +179,14 @@ nav ol {
    margin: 0 auto;
    width: 25%;
    border-radius: 0.3rem;
-   transition: transform 0.3s;
+   transition: transform 0.2s;
    display: block;
    text-align: center;
+ }
 
-
-
-
-
+ img:hover {
+   transform: scale(3);
+   z-index: 2;
  }
 
 
@@ -273,13 +273,6 @@ nav ol {
 
  footer a:link, footer a:visited {
      color: var(--font);
- }
-
- img:hover {
-   transform: scale(3);
-   z-index: 2;
-
-
  }
 
  .number {
@@ -396,5 +389,8 @@ nav ol {
 
       img {
           width: 90%;
+      }
+      img:hover {
+          transform: scale(1);
       }
  }
