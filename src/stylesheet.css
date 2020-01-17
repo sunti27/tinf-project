@@ -318,22 +318,28 @@ nav ol {
  @media screen and (max-width: 930px) {
      body {
          grid-template-areas:
+             "Footer Footer"
              "Menu Header"
-             "Menu Footer"
              "Menu Content";
-         grid-template-columns: 3fr 2fr 9fr;
+         grid-template-columns: 3fr 9fr;
+         grid-template-rows: 1fr 1fr 8fr;
          font-size: 0.9rem;
+     }
+
+     footer{
+       position: fixed;
+
      }
  }
 
  @media screen and (max-width: 600px) {
      body {
          grid-template-areas:
+             "Footer Footer"
              "Header Header"
              "Menu Menu"
-             "Footer Footer"
              "Content Content";
-        grid-template-rows: 1fr 0.75fr 1 13fr;
+        grid-template-rows: 0.5fr 1fr 1fr 13fr;
         font-size: 0.6rem;
      }
 
@@ -360,7 +366,7 @@ nav ol {
          margin: 0;
          text-align: center;
          overflow: hidden;
-         font-size: 85%;
+         font-size: 70%;
          /* Internet Explorer 10 */
          display: -ms-flexbox;
          -ms-flex-pack: center;
@@ -397,5 +403,8 @@ nav ol {
       }
       img:hover {
           transform: scale(1);
+      }
+      footer{
+        position: fixed;
       }
  }
