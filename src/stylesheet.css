@@ -1,29 +1,35 @@
  header{
-   border: solid black 4px;
+   border: solid black 2px;
    padding: 5px;
    margin: 3px;
  }
 
  nav{
-   border: solid pink 4px;
+   border: solid pink 2px;
    padding: 5px;
    margin: 3px;
  }
 
  section{
-   border: solid blue 4px;
+   border: solid blue 2px;
    padding: 5px;
    margin: 3px;
  }
 
  article{
-   border: solid lightgreen 4px;
+   border: solid lightgreen 2px;
    padding: 5px;
    margin: 3px;
  }
 
  footer{
-   border: solid purple 4px;
+   border: solid purple 2px;
+   padding: 5px;
+   margin: 3px;
+ }
+
+ main{
+   border: solid lightblue 2px;
    padding: 5px;
    margin: 3px;
  }
