@@ -67,9 +67,10 @@ header {
     display: grid;
      grid-template-areas:
          "Header Header"
-         "Menu Content";
+         "Menu Content"
+         "Menu Footer";
      grid-template-columns: 3fr 10fr;
-     grid-template-rows: 1fr 10fr;
+     grid-template-rows: 1fr 10fr 1fr;
  }
 
  ::-webkit-scrollbar {
@@ -240,32 +241,21 @@ nav ol {
  }
 
  footer {
-     margin: 0;
-     margin-top: 5%;
-     display: block;
-     left: 0;
-     padding: 0;
+     grid-area: Footer;
+     background-color: var(--footer)
+ }
+ footer a{
+   border-top: 1px solid var(--border);
+   background-color: var(--footer);
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   padding: 2%;
+   width: 29.33%;
+   transition: all 300ms ease;
  }
 
- footer ul {
-     margin: 0;
-     padding: 0;
-     list-style-type: none;
-     border-top: 1px solid var(--border);
- }
-
- footer li {
-     display: inline-block;
-     background-color: var(--footer);
-     padding: 2%;
-     margin: 0;
-     width: 29.33%;
-     text-align: center;
-     transition: all 300ms ease;
- }
-
- footer ul li:hover {
-
+ footer a:hover {
      background: var(--footer-dark);
      color: var(--footer-hover);
 
@@ -316,7 +306,8 @@ nav ol {
      body {
          grid-template-areas:
              "Menu Header"
-             "Menu Content";
+             "Menu Content"
+             "Footer Footer";
          grid-template-columns: 3fr 9fr;
          font-size: 0.9rem;
      }
@@ -327,7 +318,8 @@ nav ol {
          grid-template-areas:
              "Header Header"
              "Menu Menu"
-             "Content Content";
+             "Content Content"
+             "Footer Footer";
         grid-template-rows: 1fr 0.75fr 13fr;
         font-size: 0.6rem;
      }
